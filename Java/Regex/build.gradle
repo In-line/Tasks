@@ -1,0 +1,42 @@
+group 'com.github.in-line'
+version '0.1-Alpha'
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'java-library-distribution'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "Main"
+
+def versions = [
+        "commonsLang" : "3.7"
+]
+
+dependencies {
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.2'
+
+    compile("org.apache.commons:commons-lang3:${versions.commonsLang}")
+    compile group: 'uk.com.robust-it', name: 'cloning', version: '1.9.2'
+    compile group: 'org.javatuples', name: 'javatuples', version: '1.2'
+}
+
+distZip.shouldRunAfter(build)
+
+jar {
+    // Keep jar clean:
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+
+    manifest {
+        attributes 'Main-Class': 'Main',
+                'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+    }
+    // How-to add class path:
+    //     https://stackoverflow.com/questions/22659463/add-classpath-in-manifest-using-gradle
+    //     https://gist.github.com/simon04/6865179
+}
