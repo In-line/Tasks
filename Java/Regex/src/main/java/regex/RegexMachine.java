@@ -1,6 +1,6 @@
 package regex;
 
-import regex.exceptions.RegexCompilerError;
+import regex.exception.RegexCompilerError;
 import regex.interpretationresult.InterpreterResult;
 
 import java.util.List;

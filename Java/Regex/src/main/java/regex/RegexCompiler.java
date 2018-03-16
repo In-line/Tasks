@@ -1,15 +1,15 @@
 package regex;
 
-import regex.exceptions.RegexCompilerError;
-import regex.tokens.StringToken;
-import regex.tokens.adaptors.AbstractAdaptor;
-import regex.tokens.adaptors.NegateAdaptor;
-import regex.tokens.adaptors.PlusAdaptor;
-import regex.tokens.adaptors.StarAdaptor;
-import regex.tokens.facades.GroupFacade;
-import regex.tokens.single.*;
-import regex.tokens.single.special.BeginToken;
-import regex.tokens.single.special.EndToken;
+import regex.exception.RegexCompilerError;
+import regex.token.StringToken;
+import regex.token.adaptor.AbstractAdaptor;
+import regex.token.adaptor.NegateAdaptor;
+import regex.token.adaptor.PlusAdaptor;
+import regex.token.adaptor.StarAdaptor;
+import regex.token.facade.GroupFacade;
+import regex.token.single.*;
+import regex.token.single.special.BeginToken;
+import regex.token.single.special.EndToken;
 
 import java.util.ArrayList;
 import java.util.List;

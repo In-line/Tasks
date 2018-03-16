@@ -2,7 +2,7 @@ package regex;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import regex.exceptions.RegexCompilerError;
+import regex.exception.RegexCompilerError;
 
 import java.util.List;
 

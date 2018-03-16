@@ -1,6 +1,6 @@
 package regex;
 
-import regex.tokens.facades.GroupFacade;
+import regex.token.facade.GroupFacade;
 import regex.interpretationresult.InterpreterResult;
 
 import java.util.Arrays;

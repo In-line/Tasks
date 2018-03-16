@@ -31,6 +31,7 @@ public class InterpreterResult {
     public InterpreterResult(final InterpreterResult in) {
         this(in.string, in.position, in.possiblyMatchedCharactersLen, in.matchedCharactersLen, in.isGood);
     }
+
     // This is root for another subResults.
     public static InterpreterResult createRoot(final InterpretationContext context) {
         InterpreterResult result = new
