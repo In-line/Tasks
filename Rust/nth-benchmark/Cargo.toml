@@ -1,0 +1,16 @@
+[package]
+name = "nth-benchmark"
+version = "0.1.0"
+authors = ["alik"]
+edition = "2018"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[dependencies]
+criterion = "0.3"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
