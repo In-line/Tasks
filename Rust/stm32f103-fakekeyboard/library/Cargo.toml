@@ -1,0 +1,20 @@
+[package]
+name = "library"
+version = "0.1.0"
+authors = ["Alik Aslanyan <alik.aslanyan@mil.pub>"]
+edition = "2018"
+
+[dependencies]
+derive-new={version = "*", default-features = false}
+num-traits = {version = "0.2.1", default-features = false}
+ascii = { version = "1.0", default-features = false }
+bitflags = "1.2.1"
+nom = {version = "6.0.0-alpha1", default-features = false, features = ["alloc"]}
+snafu = {version = "0.6.8", default-features = false }
+arrayvec = {version = "0.5.1", default-features = false }
+
+[dependencies.nom_locate]
+git = "https://github.com/In-line/nom_locate.git"
+rev = "b0759dc181eb28678505a0e943e18e099e8ee469"
+default-features = false
+features = ["alloc"]
