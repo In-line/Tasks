@@ -1,0 +1,16 @@
+body {
+    overflow: hidden;
+}
+
+#root {
+    max-height: 95vh;
+    overflow: hidden;
+}
+
+.MuiCollapse-wrapperInner {
+    max-height: inherit;
+}
+
+.MuiCollapse-wrapper {
+    max-height: inherit;
+}
